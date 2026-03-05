@@ -46,3 +46,17 @@ for i in range(10):
     if i == 5: 
         pass    #do nothing when i is 5, just a placeholder for future code
     print(i)
+
+print()
+
+str = "Alapan Das"
+
+for i in str:
+    print(i)    #prints each character in the string on a new line
+
+print()
+
+for i in str:
+    if i ==" ":
+        break
+    print(i)    #prints each character in the string until it encounters a space
