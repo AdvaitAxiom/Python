@@ -1,0 +1,74 @@
+1.
+#Python sets are implemented using a hash table.
+# For small integers:
+# The hash of an integer is the integer itself.
+# Because of how hashing + memory buckets work,
+# Small numbers often appear in sorted-looking order.
+# But that is just coincidence, not sorting.
+
+
+# if set is not ordered then when I take 1,1000,50,4100 then why always it prints in a perticular order of 1000, 1,50, 4100. It should print in different order
+
+# In CPython:
+
+# hash(1)    → 1
+# hash(50)   → 50
+# hash(1000) → 1000
+
+# For integers (except -1), the hash value is the number itself.
+
+# Python set uses:
+
+# 👉 Open addressing hash table
+# 👉 Table size is always a power of 2
+# 👉 Bucket index = hash % table_size
+
+# Let’s assume table size = 8 (just for explanation)
+
+# Now compute:
+
+# 1 % 8     = 1
+# 1000 % 8  = 0
+# 50 % 8    = 2
+# 4100 % 8  = 4
+
+# So elements go into buckets:
+
+# Bucket	Value
+# 0	1000
+# 1	1
+# 2	50
+# 4	4100
+
+# Now when Python prints a set:
+
+# 👉 It scans buckets from index 0 → end
+# 👉 It prints elements in bucket order
+
+# So output becomes:
+
+# {1000, 1, 50, 4100}
+
+# 🔥 That’s why you see a “particular order”.
+
+# It’s bucket order. Not sorted order.
+
+# Why It Looks Same Every Time?
+
+# Because:
+
+# You are running same Python version
+
+# Same hash function
+
+# Same insertion pattern
+
+# Same table resizing behavior
+
+# So buckets are arranged same way → output same.
+
+# ⚠️ But Python does NOT guarantee this behavior.
+
+
+2. 
+In Python, the integer 1 and the float 1.0 are considered equal when it comes to sets and dictionaries because they have the same hash value and are considered equal in terms of their value. Therefore, when you add both 1 and 1.0 to a set, only one of them will be stored, as sets do not allow duplicate values. The string '1' and '1.0' are different from the numeric values, so they will be stored separately in the set
