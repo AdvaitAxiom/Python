@@ -22,7 +22,7 @@ print()
 i = 0 
 for i in range(1,9,2):
     print(ls[i])  
-else: 
+else:       #the else block will be executed after the loop finishes normally (without a break statement)
     print("Loop is over")
 
 print()
