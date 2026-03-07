@@ -18,3 +18,8 @@ l1.reverse()  #reverses the list
 print(l1)
 l1.sort()  #sorts the list in ascending order
 print(l1)
+
+
+nums = [1,2]
+nums *=2
+print(nums)  #This will print [1, 2, 1, 2] because the *= operator creates a new list that is the concatenation of the original list with itself. The original list nums is not modified, but a new list is created and assigned back to nums. Therefore, the output will be [1, 2, 1, 2].
