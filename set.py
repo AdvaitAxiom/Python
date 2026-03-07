@@ -106,3 +106,8 @@ print(ex_set2)
 # So buckets are arranged same way → output same.
 
 # ⚠️ But Python does NOT guarantee this behavior.
+
+
+a = {1,2,3}
+b = {4,5,6}
+print(a & b | {6})  # a & b means common element between these 2 sets = {} and | union with {6} = {} | {6} = {6}
