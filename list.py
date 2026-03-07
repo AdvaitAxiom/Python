@@ -23,3 +23,14 @@ print(l1)
 nums = [1,2]
 nums *=2
 print(nums)  #This will print [1, 2, 1, 2] because the *= operator creates a new list that is the concatenation of the original list with itself. The original list nums is not modified, but a new list is created and assigned back to nums. Therefore, the output will be [1, 2, 1, 2].
+
+
+#list unpacking
+lst = [12,[12,23], 55]
+
+a,b,c = lst #unpacking the list into variables a,b,c
+print(f'{a},{b}, {c}')
+
+#unpacking inner list
+a,(b,c),d = lst #unpacking the list into variables a,b,c,d
+print(f'{a},{b}, {c}, {d}')
