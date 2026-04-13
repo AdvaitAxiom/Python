@@ -1,5 +1,6 @@
-i=1
-while i <0:
-    print(i)
-else:
-    print("Done")
+ex_set2 = set()
+ex_set2.add(1)
+ex_set2.add(1000)
+ex_set2.add(50)
+ex_set2.add(4100)
+print(ex_set2)

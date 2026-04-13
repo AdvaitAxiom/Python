@@ -78,3 +78,33 @@ s={} is a dictionary
 
 4.
 # In Python, the integer 1 and the float 1.0 are considered equal when it comes to sets and dictionaries because they have the same hash value and are considered equal in terms of their value. Therefore, when you add both 1 and 1.0 to a set, only one of them will be stored, as sets do not allow duplicate values. The string '1' and '1.0' are different from the numeric values, so they will be stored separately in the set.
+
+5.
+    Possible Problems for not using close() after open() in file
+    1. Memory / Resource Leak
+
+    Operating systems allow only a limited number of open files.
+
+    If many files are opened without closing:
+
+    OSError: Too many open files
+    2. Data May Not Be Written Completely
+
+    If the file is opened in write mode:
+
+    f = open("file1.txt", "w")
+    f.write("Hello")
+
+    If you don't close it, the data might still be in buffer memory and not written to disk yet.
+
+    3. File May Remain Locked
+
+    On some systems (especially Windows), the file may remain locked and other programs cannot modify it.
+
+    either--> open() + close() or with open():
+
+6.
+print("\n") - > new line
+print("\\n") -> to represent a single backslash
+print (r"\n") - > using raw string(here escape characters are not processed)
+
