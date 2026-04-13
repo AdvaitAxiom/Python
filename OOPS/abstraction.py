@@ -1,4 +1,8 @@
 class Employee:
+    a = 1
+    @classmethod
+    def classM(cls):
+        print(cls.a)
     @property
     def name(self):
         return self.fname, self.lname
@@ -13,3 +17,6 @@ Alapan.name = "Alapan Das"
 print(Alapan.name)
 print(Alapan.fname)
 print(Alapan.lname)
+
+Alapan.a = 10
+Alapan.classM()
