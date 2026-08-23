@@ -28,7 +28,7 @@ print(students)
 print(marks.keys())  #returns a view object of keys
 print(marks.values())  #returns a view object of values
 print(marks.items())  #returns a view object of key-value pairs
-print("Alice" in marks)  #returns True if "Alice" is a key in marks, False otherwise
+print("Alice" in marks)  #returns True if "Alice" is a key in marks, False otherwise    (Membership function)
 marks.pop("Charlie")  #removes the key "Charlie" and its associated value
 print(marks)    
 # marks.clear()  #removes all key-value pairs from the dictionary
@@ -36,4 +36,4 @@ marks.update({"Frank": 80, "Grace": 95})  #adds multiple key-value pairs to the 
 print(marks)
 print(marks.get("Bob"))  #returns the value associated with the key "Bob", or None if the key is not found
 print(marks.get("Charlie", "Not Found"))  #returns "Not Found" since "Charlie" is not a key in marks
- 
+print(marks.get("Alice", "Not Found"))  #returns 85 since "Alice" is a key in marks
